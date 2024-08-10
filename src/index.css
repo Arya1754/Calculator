@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #f4f4f4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.wrapper {
+  width: 20rem;
+  background-color: black;
+  padding: 2rem;
+  margin-top: 4rem;
+  border-radius: 1rem;
+  box-shadow: 4px 29px 31px 0px rgba(0, 0, 0, 0.1);
+  animation: shadow-pulse 2s infinite ease-in-out;
+}
+
+@keyframes shadow-pulse {
+  0% {
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+  }
+  50% {
+    box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.2);
+  }
+  100% {
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+  }
+}
+
+.screen {
+  font-size: calc(27px + 2.7vw);
+  height: 4rem;
+  background-color: #e9f0f4;
+  border-radius: 10px;
+  margin-bottom: 1.5rem; 
+  padding: 0.5rem; 
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding-right: 1rem;
+  box-shadow: inset 0px 0px 8px rgba(0, 0, 0, 0.1);
+}
+
+.buttonbox {
+  margin-top: 3rem;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); 
+  gap: 0.5rem;
+  margin-bottom: 2rem;
+}
+
+.button {
+  background: #e9f0f4;
+  height: 3.5rem;
+  padding: 10px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  color: #242424;
+  border: none;
+  font-size: 1.5rem;
+  transition: transform 0.3s ease, background-color 0.3s ease, filter 0.3s ease;
+}
+
+.button:hover {
+  filter: hue-rotate(20deg);
+  transform: scale(1.1);
+  background-color: #d0e0e9;
+}
+
+.equals {
+  background: linear-gradient(45deg, #4bd086, #36c571);
+  grid-column: 3/5;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.equals:hover {
+  transform: scale(1.1);
+  background-color: #36c571;
+  filter: hue-rotate(20deg);
+}
+
+.opt {
+  background: linear-gradient(45deg, #ff9800, #f57c00); 
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.opt:hover {
+  transform: scale(1.1);
+  background-color: #ff6f00; 
+  filter: hue-rotate(10deg);
+}
+@media (max-width: 600px) {
+  .wrapper {
+    width: 90%;
+    max-width: 22rem; /* Adjust as needed */
+    padding: 1.5rem;
+  }
+
+  .screen {
+    font-size: calc(24px + 2vw); /* Adjust font size to fit within smaller dimensions */
+  }
+
+  .button {
+    font-size: calc(1.25rem + 0.5vw);
+  }
+}
